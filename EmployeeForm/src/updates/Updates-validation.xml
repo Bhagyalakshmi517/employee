@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  
+<!DOCTYPE validators PUBLIC 
+  		"-//OpenSymphony Group//XWork Validator 1.0.2//EN" 
+  		"http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+
+  		<validators>
+  		
+  		<field name="name">
+  		<field-validator type="requiredstring">
+  		<message>Name can't be blank</message>
+  		</field-validator>
+  		<field-validator type="stringlength">
+  		<param name="minLength">5</param>
+  		<param name="maxLength">20</param>
+  		<message>Name length should be min ${minLength} to max ${maxLength}</message>
+  		</field-validator>
+  		<field-validator type="regex">  
+        <param name="expression">^[a-zA-Z_ ]*$</param>  
+        <message>data must be alphabet of 20 characters only</message>  
+        </field-validator> 
+  		</field>
+  		
+  		<field name="position">
+  		<field-validator type="requiredstring">
+  		<message>field can't be blank</message>
+  		</field-validator>
+  		<field-validator type="stringlength">
+  		<param name="minLength">2</param>
+  		<param name="maxLength">20</param>
+  		<message>data should be min ${minLength} to max ${maxLength}</message>
+  		</field-validator>
+  		<field-validator type="regex">  
+        <param name="expression">^[a-zA-Z_ ]*$</param>  
+        <message>data must be alphabet of 20 characters only</message>  
+        </field-validator>
+  		</field>
+  		<!--  
+  		<field name="age">
+  		<field-validator type="regex">  
+        <param name="expression">^[18-99]{2}$</param>  
+        <message>age between 18 to 99 </message>  
+        </field-validator>
+        </field>-->
+  		<!--  
+  		<field name="age">
+  		<field-validator type="int">
+  		<param name="min">18</param>
+  		<param name="max">35</param>
+  		<message>age must be between ${min} to ${max}</message>
+  		</field-validator>
+  		</field>
+  		-->
+  		<!--  
+  		<field name="cno">
+  		<field-validator type="regex">
+  		<param name="cno">^[789]\d{9}$</param>
+  		<message>mobile number starts with 7 or 8 or 9</message>
+  		</field-validator>
+  		</field>
+  	-->
+  		<field name="cno">
+  		<field-validator type="requiredstring">
+  		<message>mobile number can't be empty</message>
+  		</field-validator>
+  		<field-validator type="regex">
+  		<param name="expression">^[789]\d{9}$</param>
+  		<message>mobile number starts with 7/8/9, not exceed 10 numbers</message>
+  		</field-validator>
+  		</field>
+  		
+  		<field name="gender">
+  		<field-validator type="requiredstring">
+  		<message>select atleast one option</message>
+  		</field-validator>
+  		</field>
+  		
+  		<field name="address">
+  		<field-validator type="requiredstring">
+  		<message>field can't be blank</message>
+  		</field-validator>
+  		<field-validator type="regex">
+  		<param name="expression">^[a-zA-Z0-9\-,_ ]*$</param>
+  		<message>field not allow special character except \ or - or ,</message>
+  		</field-validator>
+  		
+  		</field>
+  		
+  		<field name="dept">
+  		<field-validator type="requiredstring">
+  		<message>field can't be blank</message>
+  		</field-validator>
+  		<field-validator type="regex">
+  		<param name="expression">^[a-zA-Z_ ]*$</param>
+  		<message>allows only alphabets with spaces</message>
+  		</field-validator>
+  		<field-validator type="stringlength">
+  		<param name="minLength">5</param>
+  		<param name="maxLength">20</param>
+  		<message>dept should be min ${minLength} to max ${maxLength}</message>
+  		</field-validator>
+  		</field>
+  
+  		<!--  <field name="hdate">
+  		<field-validator type="date">
+  	    <param name="min">01/01/1980</param>
+  		<param name="max">12/31/2017</param>
+  		<message>date must be within ${min} and ${max}</message>
+  		</field-validator>
+  		</field>
+  		
+  		<field name="bdate">
+  		<field-validator type="date">
+  		<param name="min">01/01/1950</param>
+  		<param name="max">12/31/2017</param>
+  		<message>Date of Birth must be within ${min} and ${max}</message>
+  		</field-validator>
+  		</field>-->
+  
+  		</validators>

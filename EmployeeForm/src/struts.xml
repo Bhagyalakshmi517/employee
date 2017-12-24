@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+
+<package name="abc" extends="struts-default">
+
+
+
+<action name="register"  class="com.RegisterAction">
+<result name="success">/success.jsp</result>
+<result name="error">/error.jsp</result>
+<result name="input">/index.jsp</result>
+</action>
+<action name="viewrecords"  class="retrieve.RetrieveAction">
+<result name="success">/display.jsp</result>
+
+</action>
+
+<action name="update"  class="update.UpdateForm">
+<result name="success">/edit.jsp</result>
+
+
+</action>
+<action name="updates"  class="updates.Updates">
+<result name="input">/edit.jsp</result>
+<result name="success">/updateSuccess.jsp</result>
+<result name="error">/updateError.jsp</result>
+</action>
+<action name="deleteform"  class="delete.DeleteForm">
+<result name="success">/delete.jsp</result>
+<result name="error">/failure.jsp</result>
+</action>
+
+</package>
+</struts> 
